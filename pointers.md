@@ -64,3 +64,74 @@ int main(void) {
 }
 ```
 
+### Ex. 5
+
+Iterate through the array of `int` - Can you not use array subscripting and instead dereference the elements at the address offset to print out the value?
+
+Can you answer this question now: Are array subscripts and pointer dereferencing the same? 
+
+```c
+void print_data(int* data, int num_elements) {
+    for (int i = 0; i < num_elements; i++) {
+        printf("%d\n", /* complete this */);
+    }
+}
+
+int main(void) {
+    int d[5] = {4, 5, 2, 9, 9};
+
+    print_data(/* complete this */);
+
+    return 0;
+}
+```
+
+### Ex. 6 
+
+Given a `struct` with this declaration:
+
+```c
+struct Dog {
+    char name[10];
+    int age;
+};
+```
+
+How do I complete this code? Please note that `struct` are value types, so they are just like any other data type. So we can pass them as pointers too just like `int`, `char`, etc.
+
+```c
+void print_info(struct Dog* d) {
+    char* name = // ... Complete this
+
+    printf("The dog's name is: %s\n", name);
+    printf("The dog's age is: %d\n", /* ... Complete this */);
+}
+
+int main(void) {
+    struct Dog d = {.name = "Bill", .age = 4};
+    print_info(/* Complete this */); // Hint: Reference the struct. What operator is this?
+
+    return 0;
+}
+```
+
+### Ex. 7
+
+Write a function to find the length of a string. You cannot use `strlen`. Remember `char*` are strings that end with a `\0' character.
+
+```c
+int find_string_length(char* str) {
+    /* complete this */
+}
+
+int main(void) {
+    char* h = "hello, world";
+
+    int length = find_string_length(/* complete this */);
+
+    printf("The length of the string is: %d\n", length);
+
+    return 0;
+}
+
+```
